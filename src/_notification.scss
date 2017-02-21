@@ -1,0 +1,22 @@
+%box--success,
+%box--info,
+%box--alert {
+  border-radius: $borderradius-base;
+  font-weight: bold;
+  font-size: $fontsize-M;
+}
+
+.box--note {
+  border-radius: 0;
+  background-color: $ben-athens;
+  color: $ben-forever;
+}
+
+
+.body-notifications .col {
+  padding-left: 0;
+}
+
+.color--blue {
+  color: #00b0f0; // _random_colour
+}

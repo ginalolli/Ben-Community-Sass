@@ -1,0 +1,98 @@
+.forum-icon,
+.forum-list .table__collapse {
+  color: $brand-primary;
+}
+
+.content-header {
+  margin-top: $space-base;
+}
+
+//Phrase Or
+.or {
+  display: inline-block;
+  @include setPadding(7px 15px);
+}
+
+
+// Widget tabs
+.widget--tabs {
+  margin-top: 30px;
+}
+
+.sections__nav {
+
+  ul {
+    border-bottom: $border-width $border-style $ben-alto;
+  }
+
+  ul li {
+    @include setMargin(n 0);
+  }
+
+  a {
+    @include setPadding(13px 15px 10px 15px);
+    color: $ben-pocket;
+    font-family: $font-primary-stack-bold;
+
+    &.is-active {
+      color: $color-day;
+      background-color: $brand-primary;
+    }
+  }
+}
+
+
+
+
+@include media(tablet) {
+  .full-width.Template-content {
+    // border: 1px solid red;
+  }
+
+  .box__pad {
+    @include setPadding(n $space-base);
+  }
+}
+
+@include media(mobile) {
+
+  .searchbox__input {
+    margin-bottom: 15px;
+  }
+
+  .searchbox--large .searchbox__button .btn {
+    width: 40px;
+    height: 35px;
+    background-color: $brand-primary;
+    color: $color-day;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+    &:after {
+      border: none;
+    }
+  }
+
+  .createnew__button .btn {
+    width: 100%;
+    background-color: $brand-dark;
+
+    &:after {
+      content: none;
+    }
+  }
+
+  .or {
+    text-align: center;
+    display: block;
+    margin-bottom: $space-base-small;
+  }
+
+  .group--smallgap .group__item {
+    padding-right: 0;
+  }
+
+  .forum-list .box {
+    margin-bottom: 0;
+  }
+}

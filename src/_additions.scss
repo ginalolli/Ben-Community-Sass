@@ -1,0 +1,322 @@
+// Body
+body {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%; /* Prevent font scaling  */
+  font-family: $font-primary-stack;
+}
+
+a:hover {
+  color: $link-color-base-hover;
+}
+
+.link--topic {
+  word-break: normal;
+}
+
+.col--main .box__pad {
+  @include setPadding(0 $space-base-small);
+}
+
+.seperator {
+  color: $border-base-color;
+}
+
+.m-v-S {
+  margin-top: 0;
+}
+
+.badgeCounter {
+  margin-left: 3px;
+}
+
+.icon--checkmark:before {
+  font-family: 'insided';
+  content: "\f2e6";
+}
+
+.avatar .profilepicture {
+  border: none;
+  background-color: transparent;
+}
+
+.btn.is-loading {
+  width: 8px;
+}
+
+.list--float.list--badges {
+  margin-bottom: 5px;
+}
+
+.seperator {
+  margin-top: 15px;
+}
+
+.flag .user_data.flag__body {
+  white-space: normal;
+  word-break: normal;
+}
+
+
+.list--border > li,
+.list--border > .list__item {
+  border-top-color: $ben-alto;
+}
+
+.table .table__cell {
+  border-bottom-color: $ben-alto;
+}
+
+// Username
+.username {
+  color: $brand-primary;
+  text-transform: capitalize;
+}
+
+.twig_site-index .col--main .username {
+  text-decoration: underline;
+}
+
+
+.radio-box-button .radio-box-button--content {
+  line-height: 21px;
+}
+
+.editor-type .radio-box-button .icon--question {
+  margin-top: 0;
+}
+
+// Forum icon
+
+.new .forum-icon {
+  color: $ben-secondary-sun;
+}
+
+//Profile page
+.box__pad.user-statistics {
+  @include setPadding(10px n);
+}
+
+.box__pad.userprofile-personal {
+  @include setPadding($space-base n);
+}
+
+//Profile page
+.box__pad.user-statistics {
+  @include setPadding(10px n);
+  border-color: $ben-alto;
+}
+
+.box__pad.userprofile-personal {
+  @include setPadding($space-base n);
+}
+
+// Edit profile page
+.modal-crop__bottom .btn {
+  display: block;
+  width: 100%;
+  @include setMargin(n 0 10px n)
+}
+
+//Create new topic page
+.twig_topic-new .col-main {
+
+  h1.logo {
+    float: left;
+    display: inline-block;
+  }
+
+  a.logo {
+    position: relative;
+
+    &:after  {
+      content: ' ';
+      display: block;
+      position: absolute;
+      top: 51px;
+      left: -1px;
+      z-index: 10;
+      border-width: 0 0 24px 33px;
+      border-color: transparent transparent transparent $brand-primary;
+    }
+  }
+
+  [class^="icon-"] {
+    font-size: 25px;
+    color: $color-day;
+    width: 50px;
+
+    .box__pad {
+      padding-top: $space-base;
+    }
+  }
+}
+
+.editor--new-topic .btn--cta {
+  float: right;
+}
+
+
+//add attachments
+.add-attachments__inputs {
+
+  span {
+    padding-top: 6px;
+  }
+
+  .add-attachtments__image-holder button,
+  .add-attachtments__video-holder button {
+    padding-bottom: 8px;
+  }
+}
+
+// Search page
+
+.twig_search-search .searchbox {
+  margin-bottom: 20px;
+}
+
+.tooltip .tooltip__content,
+.tooltip .tooltip__content--left {
+  box-shadow: none;
+}
+// White tooltips
+.tooltip--day.tooltip .tooltip__content {
+  border-color: $ben-alto;
+}
+
+// Black tooltips
+.tooltip.tooltip--day.radio-box-button .tooltip__content {
+  background-color: $brand-dark;
+  color: $brand-day;
+  font-family: $font-primary-stack-bold;
+  font-size: $fontsize-M;
+  border: none;
+  box-shadow: none;
+
+  .arrow:after {
+    background-color: $brand-dark;
+    box-shadow: none;
+  }
+}
+
+.tooltip .username {
+  width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+//Sticky
+.table .table__row.table__row--sticky {
+  background-color: rgba(0, 174, 239, 0.05);
+  box-shadow: 0 1px 0 0 #00aeef, inset 0 1px 0 0 #00aeef;
+}
+
+
+//Pagination
+.pages li.current a {
+  color: $color-day;
+  background-color: $brand-primary;
+  border-radius: 50%;
+}
+
+
+//Terms
+
+.terms {
+
+  h1 {
+    font-size: $fontsize-XXL;
+  }
+
+  h1, h2 {
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    color: $brand-primary;
+    font-size: $fontsize-L;
+  }
+}
+
+// Header styling
+%h {
+  font-family: $font-primary-stack-bold;
+  color: $ben-night;
+}
+
+//Text meta
+%text--meta {
+  color: $font-color-meta;
+  font-size: $font-base-size;
+}
+
+.topic__header .text--meta li {
+  text-transform: lowercase;
+}
+
+.text--meta .link--topic {
+  display: inline;
+  word-break: normal;
+}
+
+.flag .flag__body {
+  word-break: break-all;
+}
+
+.icon--calendar:before {
+    content: "\f103";
+}
+
+.topic-list .grid--2 {
+  width: 17%;
+}
+
+.modal--login {
+  .box--alert {
+    margin: 10px 0;
+  }
+  .box__pad {
+    @include setMargin(20px n n n);
+  }
+}
+
+.cropper-zoom .js-slider {
+  width: 110px;
+}
+
+
+@include media(desktop) {
+
+  .full-width.Template-content {
+    margin-top: 30px;
+  }
+
+  .full-width.Template-content .col--main {
+    border: $border-base;
+  }
+}
+
+
+@include media(mobile) {
+
+  .twig_site-index .col--main .box__pad {
+    @include setPadding(0 $space-base);
+  }
+
+  .col--main .box__pad {
+    @include setPadding(n $space-base);
+  }
+
+  .full-width {
+    top: 10px;
+  }
+
+  .userprofile-personal .group__item {
+    padding-right: 10px;
+  }
+
+  .h5 .group--inline {
+    margin-left: 0;
+  }
+}

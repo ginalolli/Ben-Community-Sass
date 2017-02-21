@@ -1,0 +1,169 @@
+/* This file will contain all the main variables used throughout all the sass files */
+
+$assets: "../";
+$image-path: "../images/";
+
+/* FONT SETTINGS */
+$font-primary-stack             : 'Ben2010Normal', sans-serif;
+$font-primary-stack-bold        : 'Ben2010Bold', serif;
+$font-secondary                 : 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+
+$fonts                          : $font-primary-stack;
+
+$fonts : (
+    'Ben2010Normal' 'ben2010-normal' normal normal '#{$assets}fonts/ben/',
+    'Ben2010Bold' 'ben2010-bold' bold normal '#{$assets}fonts/ben/',
+    'insided' 'insided-icons' normal normal '#{$assets}fonts/insided-icons/'
+);
+
+$fontsize-super                 : 40px;
+$fontsize-XXXL                  : 30px;
+$fontsize-XXL                   : 24px;
+$fontsize-XL                    : 19px;
+$fontsize-M                     : 16px;
+$fontsize-L                     : 15px;
+$font-base-size                 : 14px;
+$fontsize-S                     : 13px;
+$fontsize-XS                    : 10px;
+
+
+
+
+
+
+//HEADINGS
+$header-h1-line-height          : 33px;
+$header-h2-line-height          : 26px;
+$header-h3-line-height          : 21px;
+
+//Line Heights
+$line-height-x-large            : 3.0;
+$line-height-large              : 2.3;
+$line-height-medium             : 1.3;
+$line-height-small              : 1.2;
+$line-height-xsmall             : 1.1;
+
+//SPACES
+$space-base                     : 20px;
+$space-base-small               : floor($space-base/2);
+$space-base-xsmall              : floor($space-base/4);
+$space-base-large               : $space-base*2;
+$space-base-extreme             : $space-base*3;
+
+
+/* BEN COLORS */
+
+$brand-dark                     : #000; //black
+$brand-day                      : #fff; //white
+
+$brand-primary                  : #00ACEF; // main color blue
+$brand-secondary                : $brand-dark;
+
+$ben-primary                    : $brand-primary; // primary color blue
+$ben-primary-heavy              : $brand-primary; // primary color blue heavy
+$ben-primary-medium             : #00CBEF; //primary color blue medium
+$ben-primary-light              : #2AAAE1; // primary color blue light
+
+//Secondary supporting colors for Ben
+$ben-secondary-sunset           : #ff6400; // sunset orange
+$ben-secondary-alert            : #fcaf17; // lighter orange
+$ben-secondary-sun              : #FAB100; // yellow
+$ben-secondary-error            : #FF0000; // red
+$ben-secondary-success          : #3CB54A; // green
+$ben-secondary-success-medium   : #00CF3F; // lighter green
+$ben-secondary-success-light    : #22DA5A; // lightest green
+
+//Shades of grey
+$ben-night                      : #333;
+$ben-dusk                       : #999;
+$ben-thundercloud               : #666;
+$ben-pocket                     : #141414;
+$ben-forever                    : #1A1A1A;
+$ben-rubbertree                 : #979797;
+$ben-artgallery                 : #EFEFEF;
+$ben-iron                       : #D5D7DB;
+$ben-athens                     : #F0F2F6;
+$ben-chateau                    : #A7AEB5;
+$ben-alto                       : #D8D8D8;
+
+
+/* TEMPLATE COLORS */
+
+$font-color-base                : $ben-night;
+
+//Primary colors 2 colors used in templating
+$color-brand                    : $brand-primary;
+
+//Tints of dark, medium and light colors used througout the platform
+$color-night                    : $brand-dark;
+$color-day                      : $brand-day;
+$color-dusk                     : $ben-dusk;
+
+//Some extra colours
+$color-alert                    : $ben-secondary-error;
+$color-note                     : $color-day;
+$color-success                  : $ben-secondary-success;
+$color-info                     : $ben-secondary-alert;
+
+//
+// $color-reputation               : $color-contrast;
+
+$color-facebook                 : #3b5998;
+$color-twitter                  : #55acee;
+$color-linkedin                 : #0077b5;
+$color-google                   : #cc3732;
+
+$font-color-brand               : $color-brand;
+
+$link-color-base                : $color-brand;
+$link-color-base-hover          : $color-brand;
+
+$meta-color                     : $ben-dusk;
+
+$body-color-background          : $color-day;
+
+
+//Notifications
+$notification-color-alert       : $ben-secondary-alert;
+$notification-color-note        : $ben-primary-heavy;
+$notification-color-ok          : $ben-secondary-success;
+
+//BORDERS
+
+
+
+$border-width                   : 1px;
+$border-style                   : solid;
+$border-base                    : $border-width $border-style $ben-alto;
+
+$borderradius-base              : 4px;
+
+//Buttons
+$btn-primary-bkg-color          : $brand-primary;
+$btn-secondary-bkg-color        : $brand-dark;
+$btn-tertiary-bkg-color         : $ben-secondary-success-medium;
+
+$borderradius-button            : 5px;
+
+
+//BOX-SHADOW
+$box-shadow                     : 0 0 8px 0 #d2d2d2;
+
+//FORMS
+
+// Input
+$input-font-color               : $ben-thundercloud;
+$input-border-color             : $ben-alto;
+$input-border-width             : $border-width;
+$input-border-radius            : $borderradius-base;
+
+// *_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*
+
+// $SIZES
+
+// *_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*
+
+$site-width                     : 960px;
+$maincol-width                  : 100%;
+$sidebar-width                  : 240px;
+$gutter                         : 20px;

@@ -1,0 +1,24 @@
+.editor__text textarea {
+  @include setPadding(15px);
+}
+
+.toolbar {
+  background-color: $ben-athens;
+  border: $border-base;
+  border-width: 0 1px 1px 1px;
+}
+
+.btn--editor {
+  color: $brand-primary;
+
+  &:before {
+    font-size: 18px;
+  }
+  &:hover {
+    color: $ben-primary-medium;
+  }
+}
+
+.editor--commenting.is-disabled .editor--login--message {
+  @include setMargin(7px n);
+}

@@ -1,0 +1,204 @@
+//Post
+.post.box__pad {
+  @include setPadding($space-base);
+}
+
+//Thread quote
+.threadQuote {
+  border-left-color: $ben-forever;
+  font-style: normal;
+  padding-left: $space-base-small;
+
+  b {
+    color: $ben-pocket;
+  }
+}
+
+//Poll
+.poll__result-indicator,
+.poll__result-group {
+  border-radius: $borderradius-base;
+}
+
+
+.pill {
+  padding-top: 5px;
+  background: $brand-primary;
+  line-height: 1.2;
+  font-family: $font-primary-stack-bold;
+
+  &.pill--uppercase {
+    text-transform: none;
+  }
+}
+
+.pill.pill--answer {
+  background-color: $ben-secondary-success-medium;
+}
+
+
+.fancybox-image {
+  margin-bottom: $space-base;
+}
+
+//Best answer
+.answer-field .icon--checkmark {
+  top: 24px;
+}
+
+.post__actions li .link--quiet:before {
+  line-height: 17px;
+}
+
+
+.tag--pill.icon--pen {
+  padding-bottom: 5px;
+}
+
+
+//Metadata
+.topic__header .text--meta {
+
+  &, a {
+    @extend %text--meta;
+  }
+}
+
+.post__user__meta .text--meta .list-item--float-right .post__date {
+  @extend %text--meta;
+}
+
+
+//Post action links
+.post__actions {
+
+  li:last-child {
+    margin-right: 0;
+  }
+
+  .icon--b {
+    padding-left: 25px;
+    text-transform: capitalize;
+    color: $brand-primary;
+  }
+}
+
+//Custom share options
+.post__actions {
+
+  li {
+    margin-bottom: 20px;
+  }
+
+  .tooltip {
+    width: 227px;
+  }
+
+  .icon--share {
+    float: left;
+    margin-right: 10px;
+  }
+}
+
+.Tooltip--share {
+  margin-top: -6px;
+  float: left;
+  width: 157px;
+
+  .btn--icon.btn {
+    border-radius: 50%;
+  }
+
+  .btn--facebook,
+  .btn--twitter,
+  .btn--google,
+  .btn--linkedin {
+    background-color: $brand-primary;
+  }
+}
+
+
+
+@include media(desktop) {
+
+  .post__actions {
+
+    li {
+      margin-right: 5px;
+
+      &:last-child {
+        margin-right: -24px;
+      }
+    }
+
+    .tooltip {
+      width: auto;
+    }
+  }
+
+  //Comments
+  .topic__comment--header {
+    @include setPadding(30px $space-base-small $space-base-small $space-base-small);
+    border-color: $border-base-color;
+    margin-bottom: 20px;
+  }
+
+  //Topic header
+  .topic__header {
+    @include setPadding(30px $space-base-small n $space-base-small);
+  }
+
+  .topic__sort {
+    top: 32px;
+  }
+
+
+}
+
+@include media(mobile) {
+
+  //Topic header
+  .topic__header {
+    @include setPadding(30px $space-base n $space-base);
+  }
+
+  .topic__comment--header {
+    @include setPadding(0 $space-base n $space-base);
+  }
+
+  .group--inline {
+    margin-left: 30px;
+  }
+
+  .post--bestanswer,
+  .Sidebarmodule {
+    margin: $space-base;
+  }
+
+  .Sidebar {
+    margin-top: 0;
+  }
+
+  .post__actions {
+
+    li {
+      margin-right: 0;
+      width: 37px;
+      &.more__item {
+        width: auto;
+      }
+      &:last-child {
+        margin-right: -16px;
+      }
+    }
+
+    .tooltip {
+      width: auto;
+    }
+  }
+
+  .add-attachment__delete {
+    right: -10px;
+    top: 0;
+  }
+}

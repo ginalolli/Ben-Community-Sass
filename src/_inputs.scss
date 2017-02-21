@@ -1,0 +1,90 @@
+// Custom checkboxes and radio buttons
+.fancyselect input[type="radio"] + label,
+.fancyselect input[type="checkbox"] + label {
+  padding-left: 30px;
+}
+
+.fancyselect input[type="radio"] + label:before,
+.fancyselect input[type="checkbox"] + label:before,
+.fancyselect input[type="radio"]:checked + label:before,
+.fancyselect input[type="checkbox"]:checked + label:before {
+  background:transparent url("#{$assets}images/sprite-input-bg.png") no-repeat;
+  content: "";
+  width: 20px;
+  height: 20px;
+  padding-left: 30px;
+}
+
+.fancyselect input[type="radio"] + label:before {
+  background-position: 0 -60px;
+}
+
+.fancyselect input[type="radio"]:checked + label:before {
+  background-position: 0 -89px;
+}
+
+.fancyselect input[type="checkbox"] + label:before {
+  background-position: 0 -1px;
+}
+
+.fancyselect input[type="checkbox"]:checked + label:before {
+  background-position: 0 -31px;
+}
+
+
+.lt-ie9 {
+    input[type="checkbox"],
+    input[type="radio"] {
+      display: inline;
+
+      + label{
+        background: transparent;
+        padding:0;
+      }
+    }
+}
+
+.selectize-control.multi .selectize-input > div {
+  background-color: $ben-athens;
+  color: $ben-night;
+  @include setPadding(3px 4px);
+
+  .remove {
+    color: $brand-primary;
+
+    &:hover {
+      color: $ben-primary-medium;
+    }
+  }
+}
+
+
+.selectize-dropdown.multi.js-input-tags {
+  border: 1px solid $ben-iron;
+  background: $ben-athens;
+  box-shadow: none;
+}
+
+
+input[type=search] {
+  padding-bottom: 0;
+}
+
+
+input[type=text],
+input[type=search],
+input[type=email],
+input[type=password],
+textarea {
+  @include setPadding(4px n);
+}
+
+
+input.error[type=text],
+input.error[type=search],
+input.error[type=email],
+input.error[type=password],
+textarea.error {
+  border-color: $color-alert;
+  color: $color-alert;
+}

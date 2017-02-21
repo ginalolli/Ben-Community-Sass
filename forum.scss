@@ -1,0 +1,56 @@
+@import "./_icons.scss";
+/*
+_settings.scss:
+    imports THIS THEME's settings file. Settings in this file will overrule the !default settings in Barebones' settings file
+*/
+
+@import 'src/settings';
+
+// IMPORT VENDORS
+@import 'barebones/js/src/vendors/magnific-popup/src/css/main';
+@import 'partials/vendors';
+
+/*
+_core-importer.scss:
+    imports the CORE of Barebones. In theory, importing this fill will give you ALL Insided's SASS-functionality without outputting any CSS.
+*/
+
+@import 'barebones/sass/src/_core-importer.scss';
+
+
+/*
+_outputs.scss:
+    imports all SASS files that will actually output CSS, based on the CORE functionality imported above.
+    This file lives in your theme and imports all _output postfixed SCSS files form Barbones. In _outputs.scss you can decide to use the 'default' output, or your own.
+*/
+
+@import 'src/output';
+
+
+/*
+_forum, _blog and _rr:
+    these files @import very specific patterns or UX elements/contexts for a specific app. Uncomment the app(s) you'll need. (See NOTE 'Styleguide 1.3' in _apps.scss).
+
+    If you need to override any of these styles, copy the contents of the Barebones file into a file in your theme and @import THAT file below instead.
+    If the app-specific styles become too big, we might consider setting up the same structure as for the 'generic' SASS files and split them in 'base' and 'output' too.
+*/
+
+
+@import 'partials/components';
+@import 'barebones/sass/src/apps/forum/forum';
+
+@import 'src/additions';
+@import 'src/header';
+@import 'src/breadcrumb';
+@import 'src/sidebar';
+@import 'src/inputs';
+@import 'src/banner';
+@import 'src/footer';
+@import 'src/buttons';
+@import 'src/forms';
+@import 'src/forum-list';
+@import 'src/index';
+@import 'src/topic';
+@import 'src/editor';
+@import 'src/notification';
+@import 'src/cookie-message'; // cookie message consent

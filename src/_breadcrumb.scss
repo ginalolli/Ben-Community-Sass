@@ -1,0 +1,50 @@
+.main-navigation--breadcrumb-wrapper {
+
+  .breadcrumb {
+
+    li {
+      font-family: $font-secondary;
+      @include setPadding(n 0 n n);
+      margin-bottom: 0;
+
+      a {
+        @include setPadding(n 0 n n);
+        color: $link-color-base;
+
+        &:before {
+          content: none;
+        }
+        &:after {
+          content: "/";
+          display: inline-block;
+          @include setPadding(n 7px n 5px);
+          color: $brand-dark;
+        }
+      }
+    }
+
+    li:last-child a {
+      font-family: $font-primary-stack-bold;
+      color: $ben-night;
+      line-height: $line-height-small;
+
+      &:after {
+        content: "";
+      }
+    }
+  }
+}
+
+@include media(desktop) {
+
+  .main-navigation--breadcrumb-wrapper .breadcrumb {
+    padding-left: 0;
+  }
+}
+
+@include media(mobile) {
+
+  .main-navigation--breadcrumb-wrapper .breadcrumb {
+    margin-left: 0;
+  }
+}

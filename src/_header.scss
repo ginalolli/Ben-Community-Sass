@@ -1,0 +1,432 @@
+.main-navigation--profile-link .username {
+  text-decoration: none;
+}
+
+.flag .flag-notification {
+  border-radius: 8px;
+  @include setPadding(3px 6px n 6px);
+}
+
+.header {
+  background-color: $brand-primary;
+  height: 39px;
+  margin-bottom: 0;
+  z-index: 20;
+
+  // Logo
+  h1.logo {
+    @include setPadding(8px n n n);
+    line-height: 0;
+    float: left;
+    display: inline-block;
+    position: absolute;
+    top: 3px;
+    left: 0;
+
+    img {
+      width: 42px;
+      height: 20px;
+    }
+  }
+
+  .menu,
+  .close-btn {
+    display: none;
+  }
+}
+
+// Hide select checkbox
+.toggle,
+.full-screen-close {
+  display: none;
+}
+
+.full-screen-close {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  cursor: pointer;
+  top:0;
+  left:0;
+}
+
+.main-navigation--nav-buttons-wrapper {
+  height: 40px;
+
+  .btn--silent {
+    padding-bottom: 8px;
+
+    &:after {
+      top: 11px;
+    }
+  }
+}
+
+
+.main-navigation--wrapper {
+
+  .sitewidth {
+    padding-top: 0 !important;
+  }
+
+  [class^="icon-"]{
+    color: $ben-night;
+  }
+
+  .icon-create {
+    width: auto;
+    margin-right: 20px;
+
+    .create-new--phrase {
+      position: relative;
+      left: 30px;
+      display: inline-block;
+      color: $ben-night;
+    }
+  }
+
+  .icon-menu {
+    width: 64px;
+
+    span {
+      position: relative;
+      left: 30px;
+    }
+  }
+}
+
+// Top menu
+.global--navigation--menu {
+  @include setPadding(8px n n n);
+  margin: 0;
+  padding-left: 80px;
+  width: 80%;
+  float: left;
+
+  .sitewidth {
+    padding: 0;
+  }
+
+  li {
+    @include setPadding(n 30px n n);
+    display: inline-block;
+
+    a {
+      color: $color-day;
+      font-family: $font-primary-stack-bold;
+      font-size: 19px;
+
+      &:active,
+      &:hover {
+        color: $brand-dark;
+      }
+    }
+  }
+
+  h1 {
+    font-size: $fontsize-S;
+    margin-right: 50px;
+  }
+
+  button {
+    margin-left: 15px;
+  }
+
+  .sitewidth {
+    height: 39px;
+    @include setPadding(0);
+  }
+
+  [class^="icon-"] {
+    font-size: 16px;
+    color: $brand-dark;
+    width: 35px;
+  }
+
+  .menu {
+    font-family: $font-primary-stack-bold;
+    line-height: 52px;
+  }
+
+  // search
+  .main-navigation--search-wrapper {
+
+    .main-navigation--search-filter {
+      height: 39px;
+    }
+
+    .searchbox {
+      margin-right: 10px;
+      position: relative;
+      top: -7px;
+
+      .icon-search {
+        top: -2px;
+      }
+
+      .icon-filter {
+        top: -6px;
+      }
+
+      .icon-cross {
+        top: -7px;
+      }
+
+      input[type=search] {
+        min-width: 200px;
+        @include setPadding(3px n);
+        line-height: $line-height-large;
+        height: 37px;
+        border-radius: 0;
+      }
+
+      .btn--search {
+        width: 20px;
+        position: absolute;
+        right: 5px;
+        top: 17px;
+        background-color: transparent;
+        margin-left: 0;
+        padding: 0;
+
+        &:after {
+          font-family: "insided";
+          content: "\1f50d";
+          color: $brand-dark;
+        }
+      }
+    }
+  }
+}
+
+.global--login {
+  @include setPadding(8px 10px n 10px);
+  font-family: $font-primary-stack-bold;
+  font-size: $fontsize-M;
+  background: $brand-dark;
+  float: right;
+  width: 130px;
+  height: 39px;
+  border-radius: 0 0 $borderradius-base $borderradius-base;
+
+  a {
+    color: $color-day;
+  }
+
+  span {
+    color: $brand-primary;
+  }
+
+  sup {
+    font-size: 8px;
+  }
+}
+
+.dropdown--profile .counter-alert span:first-child:after {
+  top: 3px;
+}
+
+
+.global--navigation--container .dropdown--forums-overview {
+  display: none;
+}
+
+@include media(desktop) {
+
+  .main-navigation--search-wrapper form .searchbox__input {
+    padding-top: 3px;
+  }
+
+  .menu,
+  .menu-heading {
+    display: none;
+  }
+
+  .main-navigation--wrapper .sitewidth {
+    @include setPadding(5px 0);
+  }
+
+  .username--header.link--quiet {
+
+    &, &:hover {
+      color: $brand-dark;
+    }
+  }
+
+  .dropdown--profile .user {
+    border-bottom-color: $ben-alto;
+  }
+
+  .main-navigation--nav-buttons-wrapper {
+    margin-right: 0;
+  }
+}
+
+
+@include media(mobile) {
+
+  .main-navigation--nav-buttons-wrapper .btn--silent {
+    margin-left: 0;
+  }
+
+  .main-navigation--dropdown-overlay {
+    top: 89px;
+  }
+
+  .main-navigation--wrapper {
+    position: relative;
+    top: 40px;
+
+      .icon-menu {
+        margin-right: 10px;
+      }
+  }
+
+  .header .menu,
+  .header .close-btn {
+    display: block;
+  }
+
+  //Ben logo
+  .header {
+    position: fixed;
+    width: 100%;
+
+    .menu {
+      display: inline-block;
+      @include setPadding(8px n n n);
+    }
+
+    h1.logo {
+      position: relative;
+      width: 42px;
+      top: 1px;
+      left: 40%;
+      margin: 0 auto;
+      display: inline-block;
+    }
+  }
+
+  // Side slide menu
+
+  // Toggle menu
+  .toggle:checked + .global--navigation--container  {
+    margin-left: 0;
+  }
+
+  .toggle:checked + .Template-content  {
+    margin-left: 40%;
+  }
+
+  .toggle:checked + .Template-content .full-screen-close {
+    display: block;
+    background: rgba(0,0,0,0.5);
+  }
+
+  .toggle-btn,
+  .close-btn {
+    cursor: pointer;
+  }
+
+  .global--navigation--container,
+  .Template-content {
+    transition: margin 0.5s ease-in-out;
+  }
+
+  .menu,
+  .menu-heading {
+
+    span {
+      position: relative;
+      top: -13px;
+      color: $color-day;
+    }
+  }
+
+  .menu {
+    position: absolute;
+    left: 20px;
+    top: 5px;
+    float: left;
+
+    i {
+      display: inline-block;
+      width: 20px;
+      height: 25px;
+      background: url('#{$assets}images/mobile-menu.png') no-repeat 0 0;
+    }
+  }
+
+  .menu-heading {
+    @include setPadding(10px 10px 0 10px);
+    text-align: left;
+
+    .close-btn i {
+      display: inline-block;
+      width: 20px;
+      height: 25px;
+      background: url('#{$assets}images/mobile-menu-close.png') no-repeat 0 0;
+    }
+  }
+
+  .global--navigation--container {
+    background: $brand-primary;
+    box-shadow: 2px 0 3px rgba(0,0,0,0.2);
+    margin-left: -79%;
+    margin-right: 0;
+    float: left;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    height: 100%;
+    width: 250px;
+    overflow-y: auto;
+
+    .global--navigation--menu {
+      padding-left: 10px;
+      text-align: left;
+
+      li {
+        margin-bottom: 20px;
+        display: block;
+
+        a {
+          font-size: $fontsize-M;
+        }
+      }
+    }
+  }
+
+.global--navigation--container .dropdown--forums-overview {
+    display: block;
+    background: $brand-primary;
+    padding-bottom: 18px;
+
+    &.dropdown {
+      border: none;
+      box-shadow: none;
+
+      ul {
+        margin: 0;
+        padding-left: 18px;
+
+          li {
+           list-style: none;
+           font-weight: bold;
+
+           &.group_link-label {
+             color: $color-day;
+             margin-bottom: 5px;
+             margin-top: 10px;
+             font-size: $fontsize-M;
+           }
+
+           .link {
+             padding-left: 10px;
+             color: $color-day;
+           }
+         }
+       }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+
+
+// this _outputs.scss file is being imported by _core-importer.scss located in barbones
+// the files that are imported below live in Barbones
+// if you need to customize any of these files, create the file in theme and change the location below
+
+@import 'barebones/sass/src/patterns/specific/spinner/spinner_output';
+@import 'barebones/sass/src/patterns/generic/links/links_output';
+@import 'barebones/sass/src/patterns/generic/forms/form-textual_output';
+@import 'barebones/sass/src/patterns/generic/forms/form-labels_output';
+@import 'barebones/sass/src/patterns/generic/forms/form-dropdown_output';
+@import 'barebones/sass/src/patterns/generic/forms/forms_output';
+@import 'barebones/sass/src/patterns/specific/avatar/avatar_output';
+@import 'barebones/sass/src/patterns/abstract/groups/flag_output';
+@import 'barebones/sass/src/patterns/specific/counter/counter_output';
+@import 'barebones/sass/src/patterns/specific/reputation/reputation_output';
+@import 'barebones/sass/src/patterns/specific/seperator/seperator_output';
+@import 'barebones/sass/src/patterns/specific/tooltip/tooltip_output';
+@import 'barebones/sass/src/patterns/abstract/boxes/boxes_output';
+@import 'barebones/sass/src/patterns/generic/buttons/buttons_output';
+@import 'barebones/sass/src/patterns/abstract/tables/css-table_output';
+@import 'barebones/sass/src/patterns/abstract/lists/lists_output';
+@import 'barebones/sass/src/patterns/generic/breadcrumb/breadcrumb_output';
+@import 'barebones/sass/src/patterns/generic/pagination/pagination_output';
+@import 'barebones/sass/src/patterns/generic/modal/modal_output';
+@import 'barebones/sass/src/patterns/specific/tags/tag_output';
+@import 'barebones/sass/src/patterns/specific/username-usertitle/username-usertitle_output';

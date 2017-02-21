@@ -1,0 +1,216 @@
+// Buttons
+%btn {
+  position: relative;
+  font-size: $font-base-size;
+  font-family: $font-primary-stack-bold;
+  box-shadow: none;
+  border-radius: $borderradius-button;
+  color: $color-day;
+  cursor: pointer;
+}
+
+%btn-arrow {
+  position: absolute;
+  right: 7px;
+  display: inline-block;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: $border-style;
+  border-width: 5px 0 5px 5px;
+  border-color: transparent transparent transparent $color-day;
+}
+
+//Blue button Small
+%btn-primary-sm {
+  @include setPadding(8px 30px 5px 12px);
+  background-color: $brand-primary;
+
+  &:after {
+    @extend %btn-arrow;
+    top: 9px;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $ben-primary-medium;
+  }
+}
+
+//Blue button Large
+%btn-primary-lg {
+  @include setPadding(9px 30px 7px 12px);
+  background-color: $brand-primary;
+  font-size: 20px;
+
+  &:after {
+    @extend %btn-arrow;
+    top: 13px;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $ben-primary-medium;
+  }
+}
+
+
+//Black button Small
+%btn-secondary-sm {
+  @include setPadding(7px 30px 7px 12px);
+  background-color: $brand-dark;
+
+  &:after {
+    @extend %btn-arrow;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $ben-night;
+  }
+}
+
+//Black button Large
+%btn-secondary-lg {
+  @include setPadding(9px 30px 7px 12px);
+  background-color: $brand-dark;
+  font-size: 20px;
+
+  &:after {
+    @extend %btn-arrow;
+    top: 13px;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $ben-night;
+  }
+}
+
+//Green button (only one size)
+%btn-tertiary {
+  @include setPadding(8px 30px 8px 12px);
+  background-color: $btn-tertiary-bkg-color;
+
+  &:after {
+    @extend %btn-arrow;
+    top: 11px;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $ben-secondary-success-light;
+  }
+}
+
+.btn--silent {
+  @extend %btn-secondary-sm;
+
+  &:after {
+    top: 9px;
+  }
+}
+
+.btn--cta,
+.btn--ok {
+  @extend %btn-tertiary;
+}
+
+// Search button in hero banner
+.banner .searchbox__button .btn--silent {
+  @extend %btn-secondary-sm;
+  border-radius: 0 $borderradius-base $borderradius-base 0;
+  height: 31px;
+  color: $color-day;
+  @include setPadding(5px n n n);
+
+  &:before {
+    content: "";
+  }
+
+  &:after {
+    top: 11px;
+  }
+}
+
+//Create new in hero banner
+.banner .searchbox .createnew__button .btn.btn--new {
+  @extend %btn-primary-sm;
+  height: 31px;
+  box-shadow: 2px 10px 5px -9px rgba(0,0,0,0.75);
+
+  &:after {
+    top: 11px;
+  }
+}
+
+//Create new on other pages
+.searchbox .createnew__button .btn.btn--new {
+  @extend %btn-secondary-sm;
+}
+
+// Show more button
+.content--centered .btn--silent {
+  @extend %btn-tertiary;
+}
+
+// Poll button
+#pollSubmit {
+  @extend %btn-tertiary;
+
+  &:disabled {
+    background-color: lighten($ben-secondary-success, 10%);
+    color: $color-day;
+  }
+}
+
+// For inputs that require the RHS arrow icon
+.first--button {
+  position: relative;
+  width: 150px;
+
+  .icon--arrow {
+     @extend %btn-arrow;
+     top: 9px;
+  }
+}
+
+//Follow/ following
+.btn--following-unfollow {
+
+  &:hover {
+    background-color: $color-alert;
+  }
+
+  &:after {
+    border: none;
+  }
+
+  &.is-follow {
+    padding-top: 9px;
+
+    &:before {
+      font-family: 'insided';
+      content: "\2720";
+    }
+  }
+}
+
+.searchbox__button .btn--cta {
+  padding-bottom: 9px;
+}
+
+// Avatar upload
+.avatar-uploader__edit .btn {
+  @extend %btn-secondary-sm;
+}
+
+.avatar-uploader__edit .link--delete {
+  display: block;
+  line-height: 30px;
+}

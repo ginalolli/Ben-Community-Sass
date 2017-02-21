@@ -1,0 +1,198 @@
+.Sidebar {
+
+  .widget {
+    border: $border-width $border-style $ben-alto;
+    margin-bottom: $space-base;
+  }
+}
+//temp for design presentaion
+.badges-img {
+  margin-bottom: 40px;
+  height: 397px;
+  background: transparent url("#{$assets}images/temp_badges.png") no-repeat center 0;
+}
+
+//Widget notification
+.widget--notification {
+
+  .avatar {
+    margin-right: $space-base-small;
+  }
+
+  .list li:last-child {
+    margin-bottom: 0;
+  }
+
+  .link--light {
+    line-height: $line-height-large;
+  }
+}
+
+
+//Recent online
+.widget--stats .who-is-online .list li:nth-child(5n+5) {
+  margin-right: 5px;
+}
+.widget--stats .who-is-online .list li:nth-child(5n+4) {
+  margin-right: 0;
+}
+
+
+//Welcome widget
+
+.widget--welcome {
+  display: none;
+  position: relative;
+  margin: $space-base 0 0;
+  border: 1px solid $ben-alto;
+
+  .h4 {
+    color: $brand-primary !important;
+  }
+
+  img {
+    margin-bottom: $space-base;
+    max-width: 200px;
+  }
+
+  .btn-login {
+    @extend %btn-secondary-lg;
+  }
+}
+
+.col--side .widget--welcome {
+  margin: 0 0 $space-base;
+}
+
+@include media(desktop){
+  .col--side .widget--welcome {
+    display: block;
+  }
+  .widget--welcome {
+    display: none;
+  }
+}
+
+@media(max-width: 1025px) {
+  .col--side .widget--welcome {
+    display: none;
+  }
+  .widget--welcome {
+    display: block;
+  }
+}
+
+@media(max-width: 960px) {
+  .widget--welcome {
+    margin: $space-base-large $space-base $space-base;
+  }
+}
+
+.widget--popular-topics .m-v-s:last-child {
+  margin-bottom: 0;
+}
+
+.box.widget.widget--notification {
+  border: none;
+
+  .list > li {
+    margin-bottom: 0;
+  }
+}
+
+.box.widget {
+  font-size: $font-base-size;
+  color: $ben-night;
+
+  .box__pad {
+    @include setPadding(18px $space-base $space-base $space-base);
+
+    .h4 {
+      font-size: $fontsize-XL;
+      color: $ben-night;
+    }
+
+    h6 {
+      font-family: $font-primary-stack;
+      font-size: $font-base-size;
+    }
+  }
+
+  .link--topic {
+    word-break: normal;
+    display: inline;
+  }
+
+  .list li:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+//Badges
+.list--badges img {
+  width: 40px;
+}
+
+
+//Tags
+.tag--pill {
+  padding-top: 11px;
+  text-transform: capitalize;
+  background-color: $color-day;
+  border: 2px solid $brand-dark;
+  color: $brand-dark;
+  @include setPadding(6px n 5px n);
+
+  &:hover {
+    border: 2px solid $brand-dark;
+      color: $brand-dark;
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+
+  &.icon--pen {
+    @include setPadding(n n 8px n);
+  }
+}
+
+
+//Share
+.platform-share {
+
+  .btn--twitter,
+  .btn--facebook,
+  .btn--google,
+  .btn--linkedin {
+    @include setPadding(6px 5px);
+    font-size: $fontsize-XXL;
+  }
+}
+
+
+@include media(mobile) {
+
+  .Sidebarmodule {
+    margin-top: 0;
+
+    .group--inline {
+
+      margin-left: 0 !important;
+
+    }
+  }
+
+  .group--inline {
+    margin-left: 5px !important; //for username on topic page?
+  }
+
+  .widget--likedusers .group--inline {
+    margin-left: 0;
+  }
+
+  //temp for design presentation
+  .badges-img {
+    margin-bottom: $space-base;
+    height: 397px;
+    background: transparent url("#{$assets}images/temp_badges_mobile.png") no-repeat center 0;
+  }
+}
